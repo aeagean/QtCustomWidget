@@ -15,8 +15,6 @@
 #include <QPainter>
 #include <QMouseEvent>
 
-#include <QDebug>
-
 class TransparentWidget : public QWidget
 {
     Q_OBJECT
@@ -25,8 +23,8 @@ public:
         : QWidget(parent)
     {
         setWindowTitle(QString::fromLocal8Bit("透明无边框窗口"));
-        setFixedSize(640, 480);
-        setWindowFlags(Qt::FramelessWindowHint);
+        setFixedSize(480, 320);
+        setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
 
         QPushButton *button = new QPushButton("Hello world!", this);
